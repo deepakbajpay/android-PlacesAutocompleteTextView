@@ -23,7 +23,7 @@ public enum AutocompleteResultType {
     /**
      * only city names.
      */
-    CITIES("cities")
+    CITIES("(cities)")
     ;
 
 

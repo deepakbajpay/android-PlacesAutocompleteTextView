@@ -175,6 +175,7 @@ public class PlacesApi {
             uriBuilder.appendQueryParameter(PARAMETER_LANGUAGE, languageCode);
         }
 
+        System.out.println("PlacesApi.autocomplete final url " + uriBuilder.toString());
         return httpClient.executeAutocompleteRequest(uriBuilder.build());
     }
 
