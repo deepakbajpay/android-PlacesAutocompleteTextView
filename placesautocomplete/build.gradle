@@ -1,7 +1,9 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.bmuschko.nexus'
+apply plugin: 'maven'
 apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.deepakbajpay'
+
 android {
     compileSdkVersion Integer.parseInt(TARGET_SDK_VERSION)
     buildToolsVersion BUILD_TOOLS_VERSION
@@ -37,7 +39,26 @@ dependencies {
     testImplementation  'junit:junit:4.12'
 }
 
-modifyPom {
+task createPom << {
+    pom {
+        project {
+            groupId 'com.gihub.depakbajpay'
+            artifactId 'placesautocomplete'
+            version '1.0'
+
+            inceptionYear '2018'
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+        }
+    }.writeTo("pom.xml")
+}
+
+/*modifyPom {
     project {
         name POM_NAME
         packaging POM_PACKAGING
@@ -64,5 +85,5 @@ modifyPom {
                 name POM_DEVELOPER_NAME
             }
         }
-    }
-}
+    }.writeTo("pom.xml")
+}*/
