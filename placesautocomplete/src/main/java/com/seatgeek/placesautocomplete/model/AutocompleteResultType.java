@@ -19,7 +19,12 @@ public enum AutocompleteResultType {
     /**
      * Any location or establishment
      */
-    NO_TYPE("no_type");
+    NO_TYPE("no_type"),
+    /**
+     * only city names.
+     */
+    CITIES("cities")
+    ;
 
 
     private final String queryParam;
