@@ -44,7 +44,7 @@ task createPom << {
         project {
             groupId 'com.gihub.depakbajpay'
             artifactId 'placesautocomplete'
-            version '1.1'
+            version '1.2'
 
             inceptionYear '2018'
             licenses {
@@ -55,7 +55,7 @@ task createPom << {
                 }
             }
         }
-    }.writeTo("pom.xml")
+    }.writeTo("placesautocomplete-1.2.pom.xml")
 }
 
 /*modifyPom {
