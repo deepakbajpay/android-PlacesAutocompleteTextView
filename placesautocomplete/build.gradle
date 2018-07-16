@@ -44,7 +44,7 @@ task createPom << {
         project {
             groupId 'com.gihub.depakbajpay'
             artifactId 'placesautocomplete'
-            version '1.0'
+            version '1.1'
 
             inceptionYear '2018'
             licenses {
