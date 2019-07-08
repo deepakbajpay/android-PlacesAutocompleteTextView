@@ -16,13 +16,41 @@ Use the following in your `build.gradle`:
 repositories {
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
+```
 
-
+gradle
+```aidl
+allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+	
 dependencies {
      implementation 'com.github.deepakbajpay:android-PlacesAutocompleteTextView:1.5'
 }
+```
 
-### Basic setup and usage
+Step 1. Add the JitPack repository to your build file
+```aidl
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+```
+Step 2. Add the dependency
+```aidl
+<dependency>
+	    <groupId>com.github.deepakbajpay</groupId>
+	    <artifactId>android-PlacesAutocompleteTextView</artifactId>
+	    <version>Tag</version>
+	</dependency>
+```
+
+Basic setup and usage
 
 1. You'll need a Google Server API key for you application. There are instructions on how to set up your API project and generate a key [here](https://developers.google.com/places/web-service/get-api-key)
 
