@@ -12,13 +12,9 @@ to provide location results and caches selected results in a history file for la
 The `PlacesAutocompleteTextView` is available from the sonatype snapshots repository.
 Use the following in your `build.gradle`:
 
-```groovy
-repositories {
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
-}
-```
 
-gradle
+### gradle
+In project level gradle
 ```aidl
 allprojects {
 		repositories {
@@ -26,12 +22,16 @@ allprojects {
 			maven { url 'https://jitpack.io' }
 		}
 	}
-	
+```
+
+In app level gradle
+```aidl
 dependencies {
      implementation 'com.github.deepakbajpay:android-PlacesAutocompleteTextView:1.5'
 }
 ```
 
+### Maven
 Step 1. Add the JitPack repository to your build file
 ```aidl
 	<repositories>
